@@ -8,8 +8,11 @@ dependencies {
 	testCompile 'junit:junit:4.12'
 }
 run {
-	systemProperties System.getProperties()
-	args System.getProperty("args").split()
+	ignoreExitValue true
+	try {
+		systemProperties System.getProperties()
+		args System.getProperty("args").split()
+	} catch (Exception e) {}
 }
 task sequencehelp << {
 	println "Integer Sequence Project"
