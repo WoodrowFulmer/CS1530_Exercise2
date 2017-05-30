@@ -1,3 +1,4 @@
+package exercise;
 public class Ex2
 {
 	public static int lazy(int in)
@@ -7,7 +8,10 @@ public class Ex2
 	
 	public static int triangle(int in)
 	{
-		return (int)(Math.pow(in,2) + in/2);
+		if(in == 1)
+			return in;
+		else
+			return in + triangle(in - 1);
 	}
 	
 	public static void main(String[] args)
@@ -28,14 +32,20 @@ public class Ex2
 		}
 		
 		if(args[0].toLowerCase().equals("lazy"))
+		{
+			System.out.print("Lazy(" + x + ") = ");
 			x = lazy(x);
+		}
 		else if(args[0].toLowerCase().equals("triangle"))
+		{
+			System.out.print("Tri(" + x + ") = ");
 			x = triangle(x);
+		}
 		else
 		{
 			System.out.println("Argument 1: should be 'lazy' or 'triangle'");
 			System.exit(1);
 		}
-		System.out.println("Result = " + x);
+		System.out.println(x);
 	}
 }
