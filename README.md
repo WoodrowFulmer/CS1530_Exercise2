@@ -1,4 +1,4 @@
-# CS1530 Exercise 3
+# CS1530 Submissions
 
 Woodrow Fulmer </br>
-Dan Gilmore
+This is where I will submit all my Exercises or other assignments CS 1530 with Laboon
